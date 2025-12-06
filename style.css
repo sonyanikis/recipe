@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "YoungSerif";
+    src: url("fonts/Young_Serif/YoungSerif-Regular.ttf") format("truetype");
+    font-weight: 400;
+}   
+
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/Outfit/Outfit-Regular.ttf") format("truetype");
+    font-weight: 400;
+}   
+
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/Outfit/Outfit-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/Outfit/Outfit-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}  
+
+:root {
+    --stone-900: #312E2C;
+    --stone-600: #5F564D;
+    --stone-150: #E3DDD7;
+    --stone-100: #F3E5D7;
+    --rose-800: #7A284E;
+    --rose-50: #FFF7FB;
+    --brown-800: #854632;
+    --white: #FFFFFF;
+}
+
+.text-preset-1 {
+    font-family: "YoungSerif", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: var(--stone-900);
+}
+
+.text-preset-2 {
+    font-family: "YoungSerif", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: var(--brown-800);
+}
+
+.text-preset-3 {
+    font-family: "Outfit", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: var(--rose-800);
+}
+
+.text-preset-4 {
+    font-family: "Outfit", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: var(--stone-600);
+}
+
+body {
+    background-color: #F3E5D7;
+}
+
+.wrapper {
+    min-height: 100%;
+	overflow: hidden;
+
+    display: flex;
+	flex-direction: column;
+}
+
+.container{
+    max-width: 536px;
+    margin: 0px auto; 
+}
+
+.white-pad {
+    flex: 1 1 auto;
+    background-color: #FFFFFF;
+    max-width: 616px;
+	margin: 0px auto;
+    border-radius: 24px;
+}
+.content {
+    margin: 40px;
+}
+.content__img {
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+}
+
+img {
+    flex: auto;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px 24px;
+}
+
+.about__title {
+    margin-bottom: 8px;
+}
+
+.prep {
+    display: flex;
+    padding: 24px;
+    background-color: var(--rose-50);
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+ul li {
+    padding: 0px 0px 8px 16px;
+}
+
+ul li:last-child {
+    padding: 0px 0px 0px 16px;
+}
+
+.prep__list li::marker {
+    color: var(--rose-800);
+}
+
+.ingridients__list li::marker {
+    color: var(--brown-800);
+}
+
+ul {
+    padding-inline-start: 24px;
+    margin-bottom: 0px;
+}
+
+.ingridients {
+    display: flex;
+}
+
+.line-1 {
+    border: none;
+    height: 1px;
+    background-color: var(--stone-150);
+    width: 536px;
+    margin: 32px 0px;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions__title {
+    margin-bottom: 24px;
+}
+
+.ingridients__title {
+    margin-bottom: 24px;
+}
+
+ol {
+    padding-inline-start: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    counter-reset: marker;
+}
+
+ol li {
+    padding: 0px 0px 8px 40px;
+    counter-increment: marker;
+    position: relative;
+}
+
+ol li:last-child {
+    padding: 0px 0px 0px 40px;
+}
+
+ol li::before {
+    content: counter(marker) ".";
+    font-family: "Outfit", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--brown-800);
+    position: absolute;
+    left: 8px;
+    width: 16px; 
+}
+
+.nutrition {
+    display: flex;
+}
+
+.nutritional__text {
+    margin: 24px 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-width: 100%;
+}
+
+td, 
+th {
+    width: 288px;
+    border-bottom: 1px solid var(--stone-150);
+    padding: 12px;
+}
+
+tr:last-child td {
+   border-bottom: none;
+}
+
+tr td:nth-child(2){
+    color: var(--brown-800);
+}
+
+ol li::marker {
+    font-family: "Outfit", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: var(--brown-800);
+}
+
+footer,
+header {
+    height: 128px;
+}
